@@ -17,7 +17,7 @@
     "Imgcommands": [
         ["!jackimg", "jack"], ["!jordanimg", "jordan"], ["!miloshimg", "milosh"], ["!jonoimg", "jono"], ["!ivanimg", "ivan"], 
         ["!duongimg", "duong"], ["!johnnyimg", "johnny"], ["!markimg", "mark"], ["!kierenimg", "kieren"], ["!georgeimg", "george"],
-        ["!ricardoimg", "ricardo"], ["!siskasimg", "siskas"]
+        ["!ricardoimg", "ricardo"], ["!siskasimg", "siskas"], ["!jamesimg", "james"]
     ],
     "insults" : ["fucking degenerate", "fucking dog", "waste of space", "waste of air", 
         "lobster cunt", "faggot", "autistic cunt", "fucking ingrate", "cum dumpster", "cock sucker", "kid toucher"]
