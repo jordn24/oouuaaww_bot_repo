@@ -1,2 +1,0 @@
-    "token": "ODI2NzU4MzY4MTIyNTAzMTc4.YGRIuw.ht0Pnj_ee66ebFjDiEyL0mqlZ5s",
-    "giphyToken": "uAL3r5OIY3sXwT5GOQRw6hcmMKpxEDwN",
