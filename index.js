@@ -1,8 +1,10 @@
 const discord = require('discord.js');
+var GphApiClient = require('giphy-js-sdk-core')
+
 // Get values from config
 const { prefix, token, giphyToken, Vcommands, Gifcommands, insults } = require('./config.json');
 const client = new discord.Client();
-var GphApiClient = require('giphy-js-sdk-core')
+giphy = GphApiClient(giphyToken)
 
 isReady = true;
 
@@ -12,14 +14,14 @@ client.on('message', async message => {
         message.reply("!Vcommands, !Gifcommands")
     }
 
-    if (message.content.toLowerCase() === '!Gifcommands'){
+    if (message.content.toLowerCase() === '!gifcommands'){
         full_cms = ""
         Gifcommands.forEach(function (cmd, index) {
             full_cms = full_cms + "\n" + cmd[0]
         });
         message.reply(full_cms)
     }
-    if (message.content.toLowerCase() === '!Vcommands'){
+    if (message.content.toLowerCase() === '!vcommands'){
         full_cms = ""
         Vcommands.forEach(function (cmd, index) {
             full_cms = full_cms + "\n" + cmd[0]
@@ -54,7 +56,7 @@ client.on('message', async message => {
             giphy.search('gifs', {"q": cmd[1]})
             .then((response) => {
                 var totalResponses = response.data.length;
-                var responseIndex = Math.floor((Math.random() * 7) + 1) % totalResponses;
+                var responseIndex = Math.floor((Math.random() * 4) + 1) % totalResponses;
                 var responseFinal = response.data[responseIndex];
 
                 message.channel.send({

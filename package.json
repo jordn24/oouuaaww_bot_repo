@@ -1,7 +1,7 @@
 {
   "name": "ooaauuww_bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "oouuaaww_bot_repo",
   "main": "oouuaaww_bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,17 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.2",
+    "giphy-js-sdk-core": "^1.0.6",
     "node-opus": "^0.3.3",
     "ytdl-core": "^4.5.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordn24/oouuaaww_bot_repo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jordn24/oouuaaww_bot_repo/issues"
+  },
+  "homepage": "https://github.com/jordn24/oouuaaww_bot_repo#readme"
 }

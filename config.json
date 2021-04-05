@@ -1,7 +1,7 @@
 {
     "prefix": "!",
-    "token": "not stored on git you dumb cunt",
-    "giphyToken": "not stored on git you dumb cunt",
+    "token": "ODI2NzU4MzY4MTIyNTAzMTc4.YGRIuw.wdLR-TVR3rzhmGxVXHiqlCUyDm8",
+    "giphyToken": "uAL3r5OIY3sXwT5GOQRw6hcmMKpxEDwN",
     "Vcommands": [
         ["!oouuaaww", "George_moan.mp3"], ["!georgewow", "George_wow.mp3"],
          ["!fuckgaypeople", "George_says_Fuck_Gay_People.mp3"], ["!protein", "George_making_protein_shake.mp3"], 
@@ -10,7 +10,9 @@
         ["!ivansass", "Ivans_Ass.mp3"]
     ],
     "Gifcommands": [
-        ["!otter", "otter"], ["!myqueen", "pokimane"]
+        ["!otter", "otter"], ["!myqueen", "pokimane"], ["!ricardo", "gay"], ["!milosh", "monkey"], ["!jordan", "mexican"],
+        ["!ivan", "russia"], ["!jono", "coconut"], ["!george", "steroids"], ["!mark", "sheep"], ["!southpark", "south park"],
+        ["!siskas", "greek"], ["!siliconvalley", "silicon valley"], ["!duong", "smelly"], ["!pain", "pain"]
     ],
     "insults" : ["fucking degenerate", "fucking dog", "waste of space", "waste of air", 
         "lobster cunt", "faggot", "autistic cunt", "fucking ingrate", "cum dumpster", "cock sucker", "kid toucher"]
