@@ -1,6 +1,6 @@
 {
     "prefix": "!",
-    "token": "ODI2NzU4MzY4MTIyNTAzMTc4.YGRIuw.wdLR-TVR3rzhmGxVXHiqlCUyDm8",
+    "token": "your mum",
     "giphyToken": "uAL3r5OIY3sXwT5GOQRw6hcmMKpxEDwN",
     "Vcommands": [
         ["!oouuaaww", "George_moan.mp3"], ["!georgewow", "George_wow.mp3"],
@@ -13,6 +13,11 @@
         ["!otter", "otter"], ["!myqueen", "pokimane"], ["!ricardo", "gay"], ["!milosh", "monkey"], ["!jordan", "mexican"],
         ["!ivan", "russia"], ["!jono", "coconut"], ["!george", "steroids"], ["!mark", "sheep"], ["!southpark", "south park"],
         ["!siskas", "greek"], ["!siliconvalley", "silicon valley"], ["!duong", "smelly"], ["!pain", "pain"]
+    ],
+    "Imgcommands": [
+        ["!jackimg", "jack"], ["!jordanimg", "jordan"], ["!miloshimg", "milosh"], ["!jonoimg", "jono"], ["!ivanimg", "ivan"], 
+        ["!duongimg", "duong"], ["!johnnyimg", "johnny"], ["!markimg", "mark"], ["!kierenimg", "kieren"], ["!georgeimg", "george"],
+        ["!ricardoimg", "ricardo"], ["!siskasimg", "siskas"]
     ],
     "insults" : ["fucking degenerate", "fucking dog", "waste of space", "waste of air", 
         "lobster cunt", "faggot", "autistic cunt", "fucking ingrate", "cum dumpster", "cock sucker", "kid toucher"]
