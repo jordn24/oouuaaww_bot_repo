@@ -2,7 +2,7 @@ const discord = require('discord.js');
 const fs = require('fs');
 const { MessageAttachment } = require('discord.js');
 
-const { prefix, giphyToken, Vcommands, Gifcommands, Imgcommands, insults } = require('./config.json');
+const { prefix, token, giphyToken, Vcommands, Gifcommands, Imgcommands, insults } = require('./config.json');
 const client = new discord.Client();
 
 client.on('ready', () => {
