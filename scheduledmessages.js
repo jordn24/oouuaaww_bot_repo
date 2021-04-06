@@ -10,9 +10,9 @@ client.on('ready', () => {
 
     fs.readdir(imgFolder, (err, files) => {
         filePath = imgFolder + "/" + files[Math.floor((Math.random() * files.length))]
-    
+
         const attachment = new MessageAttachment(filePath)
-        client.channels.cache.find(channel => channel.id === '342609340500410368').send("Look at this fucking " + insults[Math.floor((Math.random() * insults.length))], attachment)
+        client.channels.cache.find(channel => channel.id === '342609340500410368').send("Look at this " + insults[Math.floor((Math.random() * insults.length))], attachment)
     });
 });
 
