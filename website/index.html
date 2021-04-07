@@ -7,26 +7,33 @@
     <title>OOOOOUUUUAAAAWWWWW</title>
     <script src="add_data.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
-<body>
-    <form onsubmit="return false;" name="submit_insult" method="POST">
-        <label for="insult-txt">Enter Insult here: (You _________)</label>
-        <input name="insult_txt" id="insult_txt" type="text" required>
-        <input type="submit" value ="Submit" onclick="add_insult()">
-    </form>
-    <br>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+</head>
+<body class="bg-dark">
+ <div class="container m-5">
+    <div class="row mt-5">
+    <form onsubmit="return false;" name="submit_insult" method="POST">
+      	<div class="form-group">
+    		<label class="text-primary display-4" for="insult_txt">Enter Insult Here: </label>
+    		<input type="text" class="form-control mt-3" id="insult_txt" placeholder="Insult">
+		<button onclick="add_insult()" type="submit" class="btn btn-primary mt-3">Submit</button>
+	</div>
+    </form>
+    </div>
+    <div class="row mt-5">
     <!-- Imgcommand upload -->
-    <form id="submit_img" enctype="multipart/form-data">
-        <label for="command">Enter person here: </label>
-        <input name="command" id="command" type="text" required>
-        <label for="file">Upload image here:</label>
-        <input type="file" id="file" name="file" accept="image/*">
-        <input id="jquery-upload-button" type="button" value="Upload">
+    <form id="jquery-upload-form" enctype="multipart/form-data">
+        <div class="form-group">
+                <label class="text-danger display-4" for="file" > Upload Image: <small>Put files into zip first, name the zip file the same as the folder you want to put the photos in.</small> </label>
+		<input class="form-control-file text-light mt-3" type="file" id="file" name="file">
+        	<input class="btn btn-danger mt-3" id="jquery-upload-button" type="button" value="Upload">
+    	</div>
     </form>
 
     <script type="text/javascript">
-        $("jquery-upload-button").click(function() {
+       $("#jquery-upload-button").click(function() {
+            console.log("button clicked");
             let formData = new FormData();
             let file = $('#file')[0].files[0];
             formData.append('file', file);
@@ -35,19 +42,21 @@
                 url: 'upload.php',
                 type: 'post',
                 data: formData,
+                contentType: false,
                 processData: false,
                 success: function(data){
                     if (data != 0){
                         alert('Successful upload to: ' + data);
                     }
                     else {
-                        alert("ERROR YOU DUMB DOG");
+                        alert("IT DIDNT WORK YOU FUCKING RETARD");
                     }
                 },
             });
         });
     </script>
+    </div>
 
-
+    </div>
 </body>
 </html>

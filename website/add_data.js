@@ -1,8 +1,8 @@
 function add_insult(){
-    console.log(document.getElementById("insult_txt").value)
+    alert("This doesn't do anything yet");
 }
 
 function add_imgCommand(){
-    
+
 
 }
