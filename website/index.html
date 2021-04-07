@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOOOOUUUUAAAAWWWWW</title>
+    <script src="add_data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form onsubmit="return false;" name="submit_insult" method="POST">
+        <label for="insult-txt">Enter Insult here: (You _________)</label>
+        <input name="insult_txt" id="insult_txt" type="text" required>
+        <input type="submit" value ="Submit" onclick="add_insult()">
+    </form>
+    <br>
+
+    <!-- Imgcommand upload -->
+    <form id="submit_img" enctype="multipart/form-data">
+        <label for="command">Enter person here: </label>
+        <input name="command" id="command" type="text" required>
+        <label for="file">Upload image here:</label>
+        <input type="file" id="file" name="file" accept="image/*">
+        <input id="jquery-upload-button" type="button" value="Upload">
+    </form>
+
+    <script type="text/javascript">
+        $("jquery-upload-button").click(function() {
+            let formData = new FormData();
+            let file = $('#file')[0].files[0];
+            formData.append('file', file);
+
+            $.ajax({
+                url: 'upload.php',
+                type: 'post',
+                data: formData,
+                processData: false,
+                success: function(data){
+                    if (data != 0){
+                        alert('Successful upload to: ' + data);
+                    }
+                    else {
+                        alert("ERROR YOU DUMB DOG");
+                    }
+                },
+            });
+        });
+    </script>
+
+
+</body>
+</html>
