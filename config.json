@@ -21,5 +21,10 @@
         ["!ricardoimg", "ricardo"], ["!siskasimg", "siskas"], ["!jamesimg", "james"]
     ],
     "insults" : ["fucking degenerate", "fucking dog", "waste of space", "waste of air",
-        "retarded cunt", "faggot", "autistic cunt", "fucking ingrate", "cum dumpster", "cock sucker", "kid toucher"]
+        "retarded cunt", "faggot", "autistic cunt", "fucking ingrate", "cum dumpster", "cock sucker", "kid toucher"
+    ],
+
+    "Textcommands": [
+        ["!duong", "Hey, do you remember that time Duong shat his pants?"]
+    ]
 }

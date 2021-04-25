@@ -4,7 +4,7 @@ const fs = require('fs');
 var GphApiClient = require('giphy-js-sdk-core')
 
 // Get values from config
-const { prefix, token, giphyToken, Vcommands, Gifcommands, Imgcommands, insults } = require('./config.json');
+const { prefix, token, giphyToken, Vcommands, Gifcommands, Imgcommands, Textcommands, insults } = require('./config.json');
 const client = new discord.Client();
 giphy = GphApiClient(giphyToken)
 
@@ -33,6 +33,13 @@ client.on('message', async message => {
     if (message.content.toLowerCase() === '!imgcommands'){
         full_cms = ""
         Imgcommands.forEach(function (cmd, index) {
+            full_cms = full_cms + "\n" + cmd[0]
+        });
+        message.reply(full_cms)
+    }
+    if (message.content.toLowerCase() === '!tcommands'){
+        full_cms = ""
+        Textcommands.forEach(function (cmd, index) {
             full_cms = full_cms + "\n" + cmd[0]
         });
         message.reply(full_cms)
@@ -89,6 +96,12 @@ client.on('message', async message => {
                 message.channel.send("Whoops something went wrong...");
             })
         
+        }
+    });
+
+    Textcommands.forEach(function (cmd, index) {
+        if (message.content.toLowerCase() === cmd[0]) {
+            message.reply(cmd[1]);
         }
     });
 });
