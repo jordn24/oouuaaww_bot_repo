@@ -51,10 +51,10 @@ client.on('message', async message => {
 
             fs.readdir(imgFolder, (err, files) => {
                 filePath = "images/" + cmd[1] + "/" + files[Math.floor((Math.random() * files.length))]
-            
+
                 const attachment = new MessageAttachment(filePath)
                 message.reply(attachment)
-                
+
             })
         }
     });
@@ -72,7 +72,7 @@ client.on('message', async message => {
                         voiceChannel.leave();
                         });
                     }).catch(err => console.log(err));
-            
+
                     isReady = true;
                 }
             } else {
@@ -95,7 +95,7 @@ client.on('message', async message => {
             }).catch(() => {
                 message.channel.send("Whoops something went wrong...");
             })
-        
+
         }
     });
 
