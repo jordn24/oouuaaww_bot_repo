@@ -30,8 +30,8 @@ client.on('message', async message => {
 			message.channel.send("\n!shiba \n !shiba mc \n !shiba ath \n !shiba vol \n !shiba bal \n !shiba buy \n !shiba sell")
 			return
 		}
-		if (message.content.toLowerCase() === '!crypto help'){
-			message.channel.send("\n!shiba \n !ada \n !btc")
+		if (message.content.toLowerCase() === '!price help'){
+			message.channel.send("\n!shiba \n !ada \n !btc \n !doge")
 			return
 		}
 
@@ -59,6 +59,14 @@ client.on('message', async message => {
 				"%")
 			return
 		}
+    if (message.content.toLowerCase() === '!doge'){
+      let data = await CoinGeckoClient.coins.fetch('dogecoin', {});
+      message.channel.send("\nAUD: $" + data["data"]["market_data"]["current_price"]["aud"])
+      message.channel.send("\nUSD: $" + data["data"]["market_data"]["current_price"]["usd"])
+                        message.channel.send("24 Hour Change: " + data["data"]["market_data"]["price_change_percentage_24h"] +
+        "%")
+      return
+    }
 
     if (message.content.toLowerCase() === '!shiba ath'){
       let data = await CoinGeckoClient.coins.fetch('shiba-inu', {});
