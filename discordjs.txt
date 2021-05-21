@@ -1,7 +1,0 @@
-
-Installation:
-
--Create app and then bot on discord dev portal 
-- npm init
-- npm install discord.js --save
-

@@ -4,7 +4,8 @@ const fs = require('fs');
 var GphApiClient = require('giphy-js-sdk-core')
 
 // Get values from config
-const { prefix, token, giphyToken, Vcommands, Gifcommands, Imgcommands, Textcommands, insults } = require('./config.json');
+const { prefix, Vcommands, Gifcommands, Imgcommands, Textcommands, insults } = require('./config.json');
+const { token, giphyToken } = require('./tokens.json');
 const client = new discord.Client();
 giphy = GphApiClient(giphyToken)
 
