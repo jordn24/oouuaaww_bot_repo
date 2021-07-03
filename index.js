@@ -11,40 +11,54 @@ giphy = GphApiClient(giphyToken)
 
 isReady = true;
 
+function helpEmbed(command_string, title){
+    const embedMsg = new discord.MessageEmbed()
+        .setTitle(title)
+        .setDescription(command_string)
+        .setFooter("Use ! before every command you dumb dog")
+    return embedMsg
+}
+
 client.on('message', async message => {
 
     if (message.content.toLowerCase() === '!commands'){
-        message.reply("!Vcommands, !Gifcommands, !Imgcommands")
+        message.channel.send(helpEmbed("`gifcommands`, `vcommands`, `imgcommands`, `tcommands`", "Help Commands"))
     }
 
     if (message.content.toLowerCase() === '!gifcommands'){
-        full_cms = ""
+        full_cms = "`" + Gifcommands[0][0].replace('!','') + "`"
         Gifcommands.forEach(function (cmd, index) {
-            full_cms = full_cms + "\n" + cmd[0]
+            if (cmd[0] !== Gifcommands[0][0]){
+                full_cms = full_cms + ", `" + cmd[0].replace('!','') + "`"
+            }
         });
-        message.reply(full_cms)
+        message.channel.send(helpEmbed(full_cms, "Gif Commands"))
     }
     if (message.content.toLowerCase() === '!vcommands'){
-        full_cms = ""
+        full_cms = "`" + Vcommands[0][0].replace('!','') + "`"
         Vcommands.forEach(function (cmd, index) {
-            full_cms = full_cms + "\n" + cmd[0]
-        });
-        message.reply(full_cms)
-    }
+            if (cmd[0] !== Vcommands[0][0]){
+                full_cms = full_cms + ", `" + cmd[0].replace('!','') + "`"
+            }        });
+
+        message.channel.send(helpEmbed(full_cms, "Voice Commands"))
+        }
     if (message.content.toLowerCase() === '!imgcommands'){
-        full_cms = ""
+        full_cms = "`" + Imgcommands[0][0].replace('!','') + "`"
         Imgcommands.forEach(function (cmd, index) {
-            full_cms = full_cms + "\n" + cmd[0]
-        });
-        message.reply(full_cms)
-    }
+            if (cmd[0] !== Imgcommands[0][0]){
+                full_cms = full_cms + ", `" + cmd[0].replace('!','') + "`"
+            }        });
+            message.channel.send(helpEmbed(full_cms, "Image Commands"))
+        }
     if (message.content.toLowerCase() === '!tcommands'){
-        full_cms = ""
+        full_cms = "`" + Textcommands[0][0].replace('!','') + "`"
         Textcommands.forEach(function (cmd, index) {
-            full_cms = full_cms + "\n" + cmd[0]
-        });
-        message.reply(full_cms)
-    }
+            if (cmd[0] !== Textcommands[0][0]){
+                full_cms = full_cms + ", `" + cmd[0].replace('!','') + "`"
+            }        });
+            message.channel.send(helpEmbed(full_cms, "Text Commands"))
+        }
 
     Imgcommands.forEach(function (cmd, index) {
         if (message.content.toLowerCase() === cmd[0]) {
