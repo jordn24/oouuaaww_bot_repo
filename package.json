@@ -9,12 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.2",
+    "coingecko-api": "^1.0.10",
+    "crypto-price": "^0.0.6",
+    "discord.js": "^12.5.3",
+    "forever": "^3.0.4",
     "giphy-js-sdk-core": "^1.0.6",
     "node-opus": "^0.3.3",
+    "opusscript": "^0.0.8",
     "ytdl-core": "^4.5.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jordn24/oouuaaww_bot_repo.git"
