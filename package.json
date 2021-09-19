@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/text-to-speech": "^3.3.0",
     "coingecko-api": "^1.0.10",
     "crypto-price": "^0.0.6",
     "discord.js": "^12.5.3",
@@ -16,6 +17,7 @@
     "giphy-js-sdk-core": "^1.0.6",
     "node-opus": "^0.3.3",
     "opusscript": "^0.0.8",
+    "say": "^0.16.0",
     "ytdl-core": "^4.5.0"
   },
   "repository": {

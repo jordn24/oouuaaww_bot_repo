@@ -25,5 +25,9 @@
 
     "Textcommands": [
         ["!duongshit", "Hey, do you remember that time Duong shat his pants?"]
+    ],
+
+    "Randomcommands": [
+      ["!hamster"]
     ]
 }
